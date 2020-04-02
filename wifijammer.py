@@ -348,7 +348,7 @@ class PARSER:
 		self.packets     = opts.packets if opts.packets > 0 else pull.halt("Number of packets Must Be >= 1", True, pull.RED)
 		self.delay       = opts.delay   if opts.delay   >= 0 else pull.halt("Delay Interval Must be >= 0", True, pull.RED)
 		self.reset       = opts.reset   if ((opts.reset == 0) or (opts.reset >= 5)) else pull.halt("Reset Must Be >= 5. ")
-		self.code        = opts.code    if ((opts.code >= 1) and (opts.code <= 66)) else pull.halt("Code Must Be Greater Greater >= 1 and <= 66")
+		self.code        = opts.code    if ((opts.code >= 0) and (opts.code <= 66)) else pull.halt("Code Must Be Greater Greater >= 1 and <= 66")
 
 	def help(self, _help):
 		if _help:
