@@ -397,7 +397,7 @@ class PARSER:
 			ifaces = []
 			dev = open('/proc/net/dev', 'r')
 			data = dev.read()
-			for n in re.findall('[a-zA-Z0-9]+:', data):
+			for n in re.findall('[_a-zA-Z0-9]+:', data):
 				ifaces.append(n.rstrip(":"))
 			return ifaces
 
